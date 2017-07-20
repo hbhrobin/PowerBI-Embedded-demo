@@ -2,8 +2,13 @@ const $ = require("jquery");
 const pbi = require('powerbi-client');
 const powerbi = new pbi.service.Service(pbi.factories.hpmFactory, pbi.factories.wpmpFactory, pbi.factories.routerFactory)
 
-//
-// console.log(pbi)
+const Log = function(){
+  return {
+    log: function(content) {
+      console.log( content );
+    }
+  };
+}();
 
 $(()=> {
   // Read embed application token from textbox
